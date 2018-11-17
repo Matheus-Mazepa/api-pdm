@@ -2,7 +2,9 @@
 
 namespace App\Model;
 
-class Address
+use Illuminate\Database\Eloquent\Model;
+
+class Address extends Model
 {
     protected $fillable = [
         'street', 'district', 'city', 'state',

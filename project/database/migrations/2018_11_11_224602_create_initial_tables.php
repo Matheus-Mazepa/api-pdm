@@ -19,11 +19,13 @@ class CreateInitialTables extends Migration
             $table->string('district');
             $table->string('city');
             $table->string('state');
+            $table->timestamps();
         });
 
         Schema::create('game_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->timestamps();
         });
 
         Schema::create('games', function (Blueprint $table) {
@@ -60,6 +62,7 @@ class CreateInitialTables extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('user_game');
         Schema::dropIfExists('games');
         Schema::dropIfExists('game_categories');
         Schema::dropIfExists('address');

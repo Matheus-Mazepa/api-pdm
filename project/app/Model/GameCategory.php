@@ -2,7 +2,9 @@
 
 namespace App\Model;
 
-class GameCategory
+use Illuminate\Database\Eloquent\Model;
+
+class GameCategory extends Model
 {
     protected $fillable = [
         'name',
