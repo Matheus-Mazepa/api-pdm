@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Mazepa passou por aqui
                 </div>
 
                 <div class="links">
