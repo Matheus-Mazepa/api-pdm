@@ -41,20 +41,22 @@ class LoginController extends Controller
 
     public function loginAPI(Request $request)
     {
-        $credentials = [
-            'email' => $request->input('email'),
-            'password' => $request->input('password'),
-        ];
+//        $credentials = [
+//            'email' => $request->input('email'),
+//            'password' => $request->input('password'),
+//        ];
+//
+//        $isLogged = Auth::attempt($credentials);
+//
+//        if ($isLogged) {
+//            return response()->json([
+//                'user' => Auth::user()
+//            ], 200);
+//        } else {
+//            return response('Unauthorized.', 401);
+//        }
 
-        $isLogged = Auth::attempt($credentials);
-
-        if ($isLogged) {
-            return response()->json([
-                'user' => Auth::user()
-            ], 200);
-        } else {
-            return response('Unauthorized.', 401);
-        }
+        return "retorno teste";
 
     }
 }
