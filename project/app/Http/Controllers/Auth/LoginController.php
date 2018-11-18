@@ -49,7 +49,9 @@ class LoginController extends Controller
         $isLogged = Auth::attempt($credentials);
 
         if ($isLogged) {
-            return Auth::user();
+            return response()->json([
+                'user' => Auth::user()
+            ], 200);
         } else {
             return response('Unauthorized.', 401);
         }
