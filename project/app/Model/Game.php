@@ -11,6 +11,7 @@ class Game extends Model
         'description',
         'its_free',
         'price',
+        'game_category_id',
         'address_id',
         'responsible_user_id',
         'date',
