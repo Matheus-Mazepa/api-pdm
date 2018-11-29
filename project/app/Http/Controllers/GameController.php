@@ -37,6 +37,11 @@ class GameController extends Controller
         $data['date'] = Carbon::createFromFormat('Y-m-d', $data['end_time']);
         $data['address_id'] = $address->id;
         $data['game_category_id'] = $gameCategory->id;
+        unset($data['game_category']);
+        unset($data['street']);
+        unset($data['city']);
+        unset($data['state']);
+        unset($data['district']);
         $game->create($data);
     }
 }

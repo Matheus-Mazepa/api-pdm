@@ -22,5 +22,5 @@ Route::post('register-api', 'Auth\RegisterController@registerAPI');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/games', 'GameController@getAllGames')->name('games');
-Route::post('/games', 'GameController@store')->name('games.store');
+Route::post('/games/store', 'GameController@store')->name('games.store');
 Route::get('/states', 'AddressController@getStates')->name('states');
