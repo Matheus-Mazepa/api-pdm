@@ -20,6 +20,8 @@ class Game extends Model
         'end_time',
     ];
 
+    protected $dates = ['date'];
+
     public function address()
     {
         return $this->belongsTo('App\Model\Address');
