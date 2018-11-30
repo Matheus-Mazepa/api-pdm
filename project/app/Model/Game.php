@@ -15,6 +15,7 @@ class Game extends Model
         'address_id',
         'responsible_user_id',
         'title',
+        'date',
         'start_time',
         'end_time',
     ];
@@ -42,6 +43,6 @@ class Game extends Model
 
     public function getDateAttribute()
     {
-        return $this->date->format('d/m/Y');
+        return $this->attributes['date']->format('d/m/Y');
     }
 }
