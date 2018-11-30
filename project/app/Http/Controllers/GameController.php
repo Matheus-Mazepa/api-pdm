@@ -23,6 +23,7 @@ class GameController extends Controller
             'description',
             'its_free',
             'price',
+            'game_category',
             'responsible_user_id',
             'date',
             'start_time',
