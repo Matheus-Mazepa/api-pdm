@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
@@ -45,6 +46,6 @@ class Game extends Model
 
     public function getDateAttribute()
     {
-        return $this->attributes['date']->format('d/m/Y');
+        return Carbon::parse($this->attributes['date'])->format('d/m/Y');
     }
 }
