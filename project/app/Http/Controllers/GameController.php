@@ -33,8 +33,8 @@ class GameController extends Controller
         $address = new Address();
         $gameCategory = (new GameCategory())->where('name', $data['game_category'])->first();
         $address = $address->create( $request->only([ 'street', 'district', 'city', 'state',]));
-        $data['start_time'] = Carbon::createFromFormat('HH:mm', $data['start_time']);
-        $data['end_time'] = Carbon::createFromFormat('HH:mm', $data['end_time']);
+        $data['start_time'] = Carbon::createFromTimeString($data['start_time']);
+        $data['end_time'] = Carbon::createFromTimeString($data['end_time']);
         $data['date'] = Carbon::createFromFormat('Y-m-d', $data['end_time']);
         $data['address_id'] = $address->id;
         $data['game_category_id'] = $gameCategory->id;
