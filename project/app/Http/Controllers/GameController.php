@@ -14,7 +14,7 @@ class GameController extends Controller
     public function getAllGames()
     {
         return response()->json([
-            'games' => Game::with('gameCategory')->get()
+            'games' => Game::with('gameCategory', 'address')->get()
         ], 200);
     }
 

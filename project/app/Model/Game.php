@@ -14,7 +14,7 @@ class Game extends Model
         'game_category_id',
         'address_id',
         'responsible_user_id',
-        'date',
+        'title',
         'start_time',
         'end_time',
     ];
@@ -37,5 +37,11 @@ class Game extends Model
     public function users()
     {
         return $this->belongsToMany('App\User', 'user_game', 'game_id', 'user_id');
+    }
+
+
+    public function getDateAttribute()
+    {
+        return $this->date->format('d/m/Y');
     }
 }
