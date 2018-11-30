@@ -13,7 +13,9 @@ class GameController extends Controller
 {
     public function getAllGames()
     {
-        return Game::all();
+        return response()->json([
+            'games' => Game::all()
+        ], 200);
     }
 
     public function store(Request $request)
