@@ -21,7 +21,7 @@ class GameController extends Controller
     public function show($id)
     {
         return response()->json([
-            'game' => Game::whereId($id)->first()
+            'game' => Game::whereId($id)->with('gameCategory', 'address')->first()
         ], 200);
     }
 
