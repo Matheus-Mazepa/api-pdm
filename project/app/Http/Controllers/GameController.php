@@ -18,6 +18,13 @@ class GameController extends Controller
         ], 200);
     }
 
+    public function show($id)
+    {
+        return response()->json([
+            'game' => Game::whereId($id)->first()
+        ], 200);
+    }
+
     public function store(Request $request)
     {
         $data = $request->only([
